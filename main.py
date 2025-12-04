@@ -1,13 +1,11 @@
 from fastapi import FastAPI
+from datetime import datetime
 
 app = FastAPI()
 
-
-@app.get("/")
+@app.get("/year")
 async def root():
-    return {"message": "Hello World"}
+    """Returns the current year."""
+    current_year = datetime.now().year
+    return {"year": current_year}
 
-
-@app.get("/hello/{name}")
-async def say_hello(name: str):
-    return {"message": f"Hello {name}"}
