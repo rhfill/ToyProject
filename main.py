@@ -9,9 +9,9 @@ async def get_current_year():
     current_year = datetime.now().year
     return {"year": current_year}
 
-# @app.get("/month")
-# async def get_current_month():
-#     """Returns the current month."""
-#     current_month = datetime.now().month
-#     return {"month": current_month}
+@app.get("/month")
+async def get_current_month():
+    """Returns the current month."""
+    current_month = datetime.now().month
+    return {"month": current_month}
 
