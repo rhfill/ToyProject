@@ -23,4 +23,3 @@ jobs:
             sudo docker stop fastapi-container || true
             sudo docker rm fastapi-container || true
             sudo docker run -d -p 8084:8084 --name fastapi-container fastapi-app
-            sudo systemctl restart nginx
